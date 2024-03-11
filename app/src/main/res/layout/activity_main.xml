@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="56dp"
         android:text="Tip"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,6 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="35dp"
+        android:text="24%"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Base" />
@@ -96,9 +97,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="264dp"
+        android:layout_marginBottom="50dp"
         android:fontFamily="sans-serif-condensed-light"
-        android:text="The Ultimate Groja Calculator"
+        android:text="The Ultimate Gorja Calculator"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#0E6883"
@@ -108,5 +109,65 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTipDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarTip"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="@+id/seekBarTip"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTip"
+        tools:text="Acceptable" />
+
+    <TextView
+        android:id="@+id/tvDivideLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Dividir por:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalLabel" />
+
+    <TextView
+        android:id="@+id/tvDividedAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvEachPays"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvEachPays"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="20.702" />
+
+    <TextView
+        android:id="@+id/tvEachPays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Cada um paga:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvDivideLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvDivideLabel" />
+
+    <EditText
+        android:id="@+id/etNumberOfPeople"
+        android:layout_width="40dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="15dp"
+        android:ems="3"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDivideLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvDivideLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvDivideLabel"
+        tools:text="5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
